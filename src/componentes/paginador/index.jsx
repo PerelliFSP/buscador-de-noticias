@@ -1,5 +1,8 @@
+import Pagination from '@mui/material/Pagination';
 
 const Paginador = () => {
-    return "paginador";
+    return (
+        <Pagination count={10} />
+    );
 }
 export default Paginador;
