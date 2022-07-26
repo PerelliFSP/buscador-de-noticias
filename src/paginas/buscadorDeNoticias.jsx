@@ -9,6 +9,11 @@ import { styled } from '@mui/material/styles';
 
 const BuscadorDeNoticias = () =>{
 
+    const [busqueda, setBusqueda] = useState('');
+    const onBuscar = (criterio) => {
+        setBusqueda(criterio)
+    }
+
     const Item = styled(Paper)(({ theme }) => ({
         backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
         ...theme.typography.body2,
@@ -17,15 +22,16 @@ const BuscadorDeNoticias = () =>{
         color: theme.palette.text.secondary,
       }));
 
+    
     return (
 
         <Container>
             <Box>
                 <Stack direction="column">
-                    <Item><Buscador /></Item>
+                    <Item><Buscador onBuscar={onBuscar}/></Item>
                 </Stack>
                 <Stack direction="column">
-                    <Item><ListaDeNoticias /></Item>
+                    <Item><ListaDeNoticias busqueda={busqueda}/></Item>
                 </Stack>
             </Box>
         </Container>

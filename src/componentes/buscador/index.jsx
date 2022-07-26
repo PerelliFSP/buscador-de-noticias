@@ -9,14 +9,16 @@ import Button from '@mui/material/Button';
 export default Buscador; */
 
 
-const Buscador = () => {
+const Buscador = (props) => {
     const [texto, setTexto] = useState('');
 
     const onTextoChange = (evento) => {
         setTexto(evento.target.value);
     };
     const onBuscarClick = () => {
-        alert(texto);
+      if(texto.length > 3) {
+        props.onBuscar(texto);
+      }
     };
     
     return (
@@ -29,7 +31,7 @@ const Buscador = () => {
             onChange={onTextoChange}
             
         />
-        <Button variant="contained" onClick={onBuscarClick}>Contained</Button>
+        <Button variant="contained" onClick={onBuscarClick}>Buscar</Button>
 
 
       </section>
