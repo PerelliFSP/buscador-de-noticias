@@ -1,0 +1,24 @@
+#tarjeta {
+    display: flex;
+}
+img {
+    margin: 0;
+    position: relative;
+    top: 10%;
+}
+
+#imagen {
+    
+    padding: 5px;
+    align-self: center;
+}
+
+#texto {
+    text-align: initial;
+    padding: 5px;
+    margin-left: 10px;
+}
+
+#CardContent {
+    padding: 5px
+}
