@@ -1,0 +1,13 @@
+#tarj {
+    margin: 3em;
+    padding: 3em;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+}
+
+#cajita {
+    position: relative;
+
+}

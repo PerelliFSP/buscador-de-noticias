@@ -1,9 +1,15 @@
 import { Box, Card, CardContent, CardMedia, Typography } from '@mui/material';
+import { DateTime } from "luxon";
 import './tarjeta.css'
 const Noticia = ({ title, content, url, urlToImage, source, publishedAt }) => {
+
+    //"2022-07-27T00:08:28Z"
+    const fechaNoticia = DateTime.fromISO(publishedAt);
+    const fechaAMostrar = fechaNoticia.toFormat("DD '-' HH':'MM ' '' hs'");
+    
     return (
         <Card id="tarjeta">
-            <Box> 
+            <Box id="caja-imagen"> 
                 <CardMedia
                     component="img"
                     height="100"
@@ -27,8 +33,9 @@ const Noticia = ({ title, content, url, urlToImage, source, publishedAt }) => {
                 <Typography variant="body2">
                     {content}
                     <br />
-                    {publishedAt}
+                    {fechaAMostrar}
                 </Typography>
+                
                 </CardContent>
             </Box>
         

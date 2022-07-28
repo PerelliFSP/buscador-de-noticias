@@ -24,7 +24,7 @@ const BuscadorDeNoticias = () =>{
 
     
     return (
-
+                
         <Container>
             <Box>
                 <Stack direction="column">
