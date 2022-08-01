@@ -4,11 +4,9 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import './style.css';
 
-
 const Buscador = (props) => {
     const [texto, setTexto] = useState('');
     const [disabled, setDisabled] = useState(true);
-
     
     const onTextoChange = (evento) => {
         setTexto(evento.target.value);
@@ -22,7 +20,7 @@ const Buscador = (props) => {
     };
 
     const onBuscarClick = () => {
-      if(texto.trim().length > 3) {
+      if(texto.trim().length >= 3) {
         props.onBuscar(texto);
       } else {
         alert('debes escribir un término de búsqueda de al menos 4 caracteres');
@@ -33,16 +31,15 @@ const Buscador = (props) => {
       event.preventDefault();
     };
 
-    
-
     return (
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} role="search">
         <TextField 
             id="outlined-basic" 
             label="Buscar noticias" 
             variant="outlined" 
             value={texto}    
-            onChange={onTextoChange}          
+            onChange={onTextoChange}
+            role="input"          
         />
         <Button 
           disabled={disabled}
@@ -50,14 +47,11 @@ const Buscador = (props) => {
           onClick={onBuscarClick}
           type="submit"
           id="boton"
+          role="boton"
           >Buscar
         </Button>
-
-
       </form>
     );
   }
-
-
 
   export default Buscador;  

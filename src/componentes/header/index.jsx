@@ -26,8 +26,8 @@ function HideOnScroll(props: Props) {
           <AppBar>
             <Toolbar>
                 <Typography variant="h5">
-                    <ArticleIcon />
-                       <strong>buscaInfo</strong>
+                    <ArticleIcon sx={{ fontSize: 25 }}/>
+                       <strong>InfoNews</strong>
                 </Typography>
             </Toolbar>
           </AppBar>

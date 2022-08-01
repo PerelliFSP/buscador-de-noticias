@@ -28,7 +28,7 @@ const Noticia = ({ title, content, url, urlToImage, source, publishedAt }) => {
                     {title}
                 </Typography>
                 <Typography sx={{ fontSize: 14 }} color="text.secondary">
-                    <a href={url}> {url} </a>
+                    <a href={url} target="_blank" rel="noopener noreferrer"> {url} </a>
                 </Typography>
                 <Typography variant="body2">
                     {content}

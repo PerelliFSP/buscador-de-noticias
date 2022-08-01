@@ -6,3 +6,7 @@ section {
 .MuiPagination-ul {
     justify-content: center;
 }
+
+#leyenda {
+    text-align: right;
+}
